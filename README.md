@@ -1,2 +1,1 @@
-# aleptra-idm
-Aleptra - Identity Management
+# Aleptra - Identity Management

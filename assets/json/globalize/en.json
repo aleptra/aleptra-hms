@@ -1,0 +1,13 @@
+{
+  "name": "English",
+  "code": "eng",
+  "direction": "ltr",
+  "translations": {
+    "filter": "Filter",
+    "logout": "Logout",
+    "person": "Person",
+    "persons": "Persons",
+    "search": "Search",
+    "title": "Identity and Access Management"
+  }
+}
