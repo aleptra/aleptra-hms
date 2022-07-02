@@ -4,6 +4,7 @@
   "direction": "ltr",
   "translations": {
     "filter": "Filter",
+    "identity": "Identity",
     "logout": "Logout",
     "person": "Person",
     "persons": "Persons",

@@ -35,7 +35,7 @@
 <section class="pauto" storage="api">
   <nav class="crumbs pointer bocblack01 bw1 bcwhite br05 gray w0">
     <ol>
-      <li><a href="#" globalize="database">Identity</a></li>
+      <li><a href="#" globalize="identity">Identity</a></li>
       <li globalize="persons">Persons</li>
     </ol>
   </nav>
@@ -50,7 +50,7 @@
       <div id="personsalive" class="box cards list br0-" iterate="true"
         datasource="{{ storage:api.persons.endpoint }}?and=(death.is.null)"
         dataheader="{{ storage:api.persons.headers }}">
-        <a href="database/person.html?id={{ jsonget:id }}">
+        <a href="#edit?id={{ jsonget:id }}" target="edit">
           <figure class="p075 bcwhite bcblack001_h">
             <p class="f2 pl1" filteron="true">{{ jsonget:first_name.swe }} {{ jsonget:middle_name.swe }} {{
               jsonget:last_name.swe }}</p>
@@ -67,7 +67,7 @@
       <div id="personsdead" class="box cards list br0-" iterate="true"
         datasource="{{ storage:api.persons.endpoint }}?and=(death.not.is.null)"
         dataheader="{{ storage:api.persons.headers }}">
-        <a href="database/person.html?id={{ jsonget:id }}">
+        <a href="#edit?id={{ jsonget:id }}">
           <figure class="p1 bcwhite bcblack001_h">
             <img src="" jsonget="birth.country_code"
               jsonbefore="https://cdn.front.nu/dist/design/front/flags/famfamfam/" jsonafter=".gif" class="f0">
@@ -81,3 +81,9 @@
   </nav>
 
 </section>
+
+<div id="edit" class="modal w50" draggable="true">
+	<a href="#" class="close">×</a>
+	<h2>Modal</h2>
+	<p>This is the content!<br><br><br></p>
+</div>
