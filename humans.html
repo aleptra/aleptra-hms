@@ -50,10 +50,9 @@
       <div id="personsalive" class="box cards list br0-" iterate="true"
         datasource="{{ storage:api.persons.endpoint }}?and=(death.is.null)"
         dataheader="{{ storage:api.persons.headers }}">
-        <a href="#edit?id={{ jsonget:id }}" target="edit">
+        <a href="#edit" modalurl="person.html?id={{ jsonget:id }}">
           <figure class="p075 bcwhite bcblack001_h">
-            <p class="f2 pl1" filteron="true">{{ jsonget:first_name.swe }} {{ jsonget:middle_name.swe }} {{
-              jsonget:last_name.swe }}</p>
+            <p class="f2 pl1" filteron="true">{{ jsonget:first_name.swe }} {{ jsonget:middle_name.swe }} {{ jsonget:last_name.swe }}</p>
               <img src="" jsonget="birth.country_code" jsonbefore="https://cdn.front.nu/dist/design/front/flags/famfamfam/" jsonafter=".gif" class="f0">
           </figure>
         </a>
@@ -82,8 +81,5 @@
 
 </section>
 
-<div id="edit" class="modal w50" draggable="true">
-	<a href="#" class="close">×</a>
-	<h2>Modal</h2>
-	<p>This is the content!<br><br><br></p>
-</div>
+<div id="edit" class="modal w70 xl_w100p br0 bos0"></div>
+<a href="#" class="backdrop" target="_self"></a>

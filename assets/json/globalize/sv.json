@@ -6,9 +6,9 @@
     "filter": "Filtrera",
     "identity": "Identitet",
     "logout": "Logga ut",
-    "person": "Person",
-    "persons": "Personer",
+    "person": "Människa",
+    "persons": "Människor",
     "search": "Sök",
-    "title": "Identitets- och åtkomsthantering"
+    "title": "Människohanteringssystem"
   }
 }

@@ -6,9 +6,9 @@
     "filter": "Filter",
     "identity": "Identity",
     "logout": "Logout",
-    "person": "Person",
-    "persons": "Persons",
+    "human": "Human",
+    "humans": "Humans",
     "search": "Search",
-    "title": "Identity and Access Management"
+    "title": "Human Management System"
   }
 }
