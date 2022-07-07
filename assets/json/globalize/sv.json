@@ -3,8 +3,10 @@
   "code": "swe",
   "direction": "ltr",
   "translations": {
+    "dead": "Döda",
     "filter": "Filtrera",
     "identity": "Identitet",
+    "living": "Levande",
     "logout": "Logga ut",
     "human": "Människa",
     "humans": "Människor",
