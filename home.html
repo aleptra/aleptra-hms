@@ -4,28 +4,26 @@
   <aside index="1"></aside>
 </template>
 
-<section class="pauto bcwhitesmoke">
-
-  <h6 globalize="humans_awaiting_approval">Humans registrered</h6>
-  <hr class="bos8 black mt05">
+<section class="pauto bcwhitesmoke bs1">
+  <h6 globalize="humans_registered">Humans registered</h6>
+  <hr class="bos8 bcgainsboro mt05">
   <article class="box cards xxs_gtc1 xs_gtc2 sm_gtc3 xl_gtc4 xxl_gtc5 xxxl_gtc6 mt1 gut2- br05- bcwhite- border- tac"
     json="true;loader" iterate="false" datasource="https://gqfktgknxmguhxgkajat.supabase.co/rest/v1/rpc/persons"
     dataheader="apikey:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyMDc2MTg0NCwiZXhwIjoxOTM2MzM3ODQ0fQ.xEa_GuNypFdHSdQVLCd0beoL_v8jhWKjSTypX6kn-sg">
     <figure class="p1">
-      <figcaption class="dimgray fs08">Living</figcaption>
-      <p><h2 class="tag br2 bcwhitesmoke p05 w10r pr1 pl1 mb1 mt05" loader="true" jsonget="alive"></h2></p>
+      <figcaption class="dimgray fs08" globalize="living">Living</figcaption>
+      <h2 class="tag br2 bcwhitesmoke p05 w10r pr1 pl1 mb1 mt05" loader="true" jsonget="alive"></h2>
     </figure>
     <figure class="p1">
-      <figcaption class="dimgray fs08">Dead</figcaption>
-      <p><h2 class="tag br2 bcwhitesmoke p05 w10r pr1 pl1 mb1 mt05" loader="true" jsonget="dead"></h2></p>
+      <figcaption class="dimgray fs08" globalize="dead">Dead</figcaption>
+      <h2 class="tag br2 bcwhitesmoke p05 w10r pr1 pl1 mb1 mt05" loader="true" jsonget="dead"></h2>
     </figure>
   </article>
 </section>
 
 <section class="pauto" storage="api">
-
   <h4 globalize="humans_awaiting_approval">Humans awaiting approval</h4>
-  <nav class="tabs mt1" id="test">
+  <nav class="tabs mt2" id="test">
     <input type="radio" name="panel" id="tabalive" checked>
     <label for="tabalive" id="alive">Alive ({# alive #})</label>
     <section class="p0 shade1" json="personsalive" bind="alive:alive"
