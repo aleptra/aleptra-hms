@@ -50,7 +50,7 @@
       <div id="personsalive" class="box cards list br0-" iterate="true"
         datasource="{{ storage:api.persons.endpoint }}?and=(death.is.null)"
         dataheader="{{ storage:api.persons.headers }}">
-        <a href="#edit" modalurl="person.html?id={{ jsonget:id }}">
+        <a href="#edit" modalurl="human.html?id={{ jsonget:id }}">
           <figure class="p075 bcwhite bcblack001_h">
             <p class="f2 pl1" filteron="true">{{ jsonget:first_name.swe }} {{ jsonget:middle_name.swe }} {{ jsonget:last_name.swe }}</p>
               <img src="" jsonget="birth.country_code" jsonbefore="https://cdn.front.nu/dist/design/front/flags/famfamfam/" jsonafter=".gif" class="f0">

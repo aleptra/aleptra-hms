@@ -1,0 +1,13 @@
+~$*
+*/cypress/downloads
+*/cypress/screenshots
+*/cypress/videos
+*/cypress/fixtures/css
+*/cypress/fixtures/js
+*.front.nu
+*.log
+.DS_Store
+.AppleDouble
+.LSOverride
+node_modules
+package-lock.json
