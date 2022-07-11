@@ -11,13 +11,13 @@
 
       <i globalize="date_of_birth">Date of birth</i>
       <div class="box gut2-">
-        <select class="phdark bw1 bos8 bocblack02" name="birth_date_year" variable="i:1900" iterate="140;i++" jsonget="birthdate.year = format(Y)" placeholder="-" required>
+        <select class="phdark bw1 bos8 bocblack02" name="birth_date_year" variable="i:1900" iterate="140;i++" jsonget="birth.date = slice(0,4)" placeholder="-" required>
           <option>{{ i }}</option>
         </select>
-        <select class="phdark bw1 bos8 bocblack02" name="birth_date_month" variable="i:01" iterate="12;i++" placeholder="-" required>
+        <select class="phdark bw1 bos8 bocblack02" name="birth_date_month" variable="i:01" iterate="12;i++" jsonget="birth.date = slice(4,6)" placeholder="-" required>
           <option>{{ i }}</option>
         </select>
-        <select class="phdark bw1 bos8 bocblack02" name="birth_date_day" variable="i:01" iterate="31;i++" placeholder="-" required>
+        <select class="phdark bw1 bos8 bocblack02" name="birth_date_day" variable="i:01" iterate="31;i++" jsonget="birth.date = slice(6,8)" placeholder="-" required>
           <option>{{ i }}</option>
         </select>
       </div>
