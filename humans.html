@@ -1,4 +1,4 @@
-<script src="https://cdn.front.nu/dist/front.js" template="true"></script>
+<script src="https://cdn.front.nu/dist/front.js" template="index"></script>
 <title globalize="persons">Persons</title>
 <template>
   <aside index="0"></aside>
@@ -45,11 +45,8 @@
   <nav class="tabs mt05" id="test">
     <input type="radio" name="panel" id="tabalive" checked>
     <label for="tabalive" id="alive">Alive ({# alive #})</label>
-    <section class="p0 shade1" json="personsalive" bind="alive:alive"
-      bindvalue="{{ jsonheader:content-range = split('/',1) }}">
-      <div id="personsalive" class="box cards list br0-" iterate="true"
-        datasource="{{ storage:api.persons.endpoint }}?and=(death.is.null)"
-        dataheader="{{ storage:api.persons.headers }}">
+    <section class="p0 shade1" json="personsalive" bind="alive:alive" bindvalue="{{ jsonheader:content-range = split('/',1) }}">
+      <div id="personsalive" class="box cards list br0-" iterate="true" datasource="{{ storage:api.persons.endpoint }}?and=(death.is.null)" dataheader="{{ storage:api.persons.headers }}">
         <a href="#edit" modalurl="human.html?id={{ jsonget:id }}">
           <figure class="p075 bcwhite bcblack001_h">
             <p class="f2 pl1" filteron="true">{{ jsonget:first_name.swe }} {{ jsonget:middle_name.swe }} {{ jsonget:last_name.swe }}</p>
@@ -61,17 +58,12 @@
 
     <input type="radio" name="panel" id="tabdead">
     <label for="tabdead" id="dead" hide>Dead ({# dead #})</label>
-    <section class="lg_p0 shade1" run="false" json="personsdead" bind="dead:dead"
-      bindvalue="{{ jsonheader:content-range = split('/',1) }}">
-      <div id="personsdead" class="box cards list br0-" iterate="true"
-        datasource="{{ storage:api.persons.endpoint }}?and=(death.not.is.null)"
-        dataheader="{{ storage:api.persons.headers }}">
-        <a href="#edit?id={{ jsonget:id }}">
+    <section class="lg_p0 shade1" run="false" json="personsdead" bind="dead:dead" bindvalue="{{ jsonheader:content-range = split('/',1) }}">
+      <div id="personsdead" class="box cards list br0-" iterate="true" datasource="{{ storage:api.persons.endpoint }}?and=(death.not.is.null)" dataheader="{{ storage:api.persons.headers }}">
+        <a href="#edit">
           <figure class="p1 bcwhite bcblack001_h">
-            <img src="" jsonget="birth.country_code"
-              jsonbefore="https://cdn.front.nu/dist/design/front/flags/famfamfam/" jsonafter=".gif" class="f0">
-            <p class="f2 pl1" filteron="true">{{ jsonget:first_name.swe }} {{ jsonget:middle_name.swe }} {{
-              jsonget:last_name.swe }}</p>
+            <img src="" jsonget="birth.country_code" jsonbefore="https://cdn.front.nu/dist/design/front/flags/famfamfam/" jsonafter=".gif" class="f0">
+            <p class="f2 pl1" filteron="true">{{ jsonget:first_name.swe }} {{ jsonget:middle_name.swe }} {{ jsonget:last_name.swe }}</p>
             <p class="tar" jsonget="death.date"></p>
           </figure>
         </a>
@@ -80,6 +72,3 @@
   </nav>
 
 </section>
-
-<div id="edit" class="modal w70 xl_w100p br0 bos0"></div>
-<a href="#" class="backdrop" target="_self"></a>
