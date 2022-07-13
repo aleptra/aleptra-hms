@@ -47,7 +47,7 @@
     <label for="tabalive" id="alive">Alive ({# alive #})</label>
     <section class="p0 shade1" json="personsalive" bind="alive:alive" bindvalue="{{ jsonheader:content-range = split('/',1) }}">
       <div id="personsalive" class="box cards list br0-" iterate="true" datasource="{{ storage:api.persons.endpoint }}?and=(death.is.null)" dataheader="{{ storage:api.persons.headers }}">
-        <a href="#edit" modalurl="human.html?id={{ jsonget:id }}">
+        <a href="#edit" modalurl="human-edit.html?id={{ jsonget:id }}">
           <figure class="p075 bcwhite bcblack001_h">
             <p class="f2 pl1" filteron="true">{{ jsonget:first_name.swe }} {{ jsonget:middle_name.swe }} {{ jsonget:last_name.swe }}</p>
               <img src="" jsonget="birth.country_code" jsonbefore="https://cdn.front.nu/dist/design/front/flags/famfamfam/" jsonafter=".gif" class="f0">
