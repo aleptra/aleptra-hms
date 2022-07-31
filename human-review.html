@@ -3,7 +3,7 @@
   <section id="person" datasource="{{ storage:api.persons_collection.endpoint }}?select=*&or=(id.eq.{# ?id #})" dataheader="{{ storage:api.persons_collection.headers }}">
     <h3 class="mb2">Edit {{ jsonget:first_name }} {{ jsonget:middle_name }} {{ jsonget:last_name }}</h3>
     <form class="gaph2-" method="post" datasource="{{ storage:api.persons_collection.endpoint }}" dataheader="{{ storage:api.persons_collection.headers }}" ondone="dom.hide('register');dom.show('complete')">
-      <div class="group outline- gaph2-">
+      <div class="group outline- gap2">
         <input name="first_name" type="text" class="f1 phdark bw1 bos8 bocblack02" placeholder="First Name" globalize="first_name" jsonget="first_name" required>
         <input name="middle_name" type="text" class="f1 phdark bw1 bos8 bocblack02" placeholder="Middle Name" globalize="middle_name" jsonget="middle_name">
         <input name="last_name" type="text" class="f1 phdark bw1 bos8 bocblack02" placeholder="Last Name" globalize="last_name" jsonget="last_name" required>
