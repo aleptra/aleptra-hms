@@ -25,7 +25,7 @@
     <input type="radio" name="panel" id="tabalive" checked>
     <label for="tabalive" id="alive">Alive ({# alive #})</label>
     <section class="p0 shade1" json="personsalive" bind="alive:alive" bindvalue="{{ jsonheader:content-range = split('/',1) }}">
-      <div id="personsalive" class="box cards list br0-" iterate="true" datasource="{{ storage:api.persons_collection.endpoint }}?and=(approved.is.null)" dataheader="{{ storage:api.persons_collection.headers }}">
+      <div id="personsalive" class="box cards list br0-" iterate="true" datasource="{{ storage:api.persons_collection.endpoint }}&where=approved.eq(null)" dataheader="{{ storage:api.persons_collection.headers }}">
         <a href="#edit" modalurl="human-review.html?id={{ jsonget:id }}">
           <figure class="p1 bcwhite bcblack001_h">
             <img src="" jsonget="residence_country" jsonbefore="https://cdn.front.nu/dist/design/front/flags/famfamfam/" jsonafter=".gif" class="f0">
@@ -39,7 +39,7 @@
     <input type="radio" name="panel" id="tabdead">
     <label for="tabdead" id="dead" hide>Dead ({# dead #})</label>
     <section class="p0 shade1" run="false" json="personsdead" bind="dead:dead" bindvalue="{{ jsonheader:content-range = split('/',1) }}">
-      <div id="personsdead" class="box cards list br0-" iterate="true" datasource="{{ storage:api.persons.endpoint }}?and=(death.not.is.null)" dataheader="{{ storage:api.persons.headers }}">
+      <div id="personsdead" class="box cards list br0-" iterate="true" datasource="{{ storage:api.persons.endpoint }}&where=death.eq(null)" dataheader="{{ storage:api.persons.headers }}">
         <a href="database/person.html?id={{ jsonget:id }}">
           <figure class="p1 bcwhite bcblack001_h">
             <img src="" jsonget="birth.country_code" jsonbefore="https://cdn.front.nu/dist/design/front/flags/famfamfam/" jsonafter=".gif" class="f0">
