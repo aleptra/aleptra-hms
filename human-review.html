@@ -1,6 +1,6 @@
 <a href="#" class="close bcblack white pa mt1 pr1 pl1 br50">×</a>
 <article class="pauto" storage="api" json="person" bind="person:?id" enum="1:male;2:female">
-  <section id="person" datasource="{{ storage:api.persons_collection.endpoint }}?select=*&or=(id.eq.{# ?id #})" dataheader="{{ storage:api.persons_collection.headers }}">
+  <section id="person" datasource="{{ storage:api.persons_collection.endpoint }}&select=*&where=id.eq({# ?id #})" dataheader="{{ storage:api.persons_collection.headers }}">
     <h3 class="mb2">Edit {{ jsonget:first_name }} {{ jsonget:middle_name }} {{ jsonget:last_name }}</h3>
     <form class="gaph2-" method="post" datasource="{{ storage:api.persons_collection.endpoint }}" dataheader="{{ storage:api.persons_collection.headers }}" ondone="dom.hide('register');dom.show('complete')">
       <div class="group outline- gap2">
@@ -23,7 +23,7 @@
 
       <i globalize="country_of_birth">Country of birth</i>
       <div class="group">
-        <select class="phdark bw1 bos8 bocblack02" id="birth_country" name="birth_country" iterate="true" json="true" datasource="{{ storage:api.countries.endpoint }}?order=country->>eng" dataheader="{{ storage:api.countries.headers }}" ondone="_.populate(this.aEl)" populate="residence_country" jsonget="birth_country" placeholder="-" required>
+        <select class="phdark bw1 bos8 bocblack02" id="birth_country" name="birth_country" iterate="true" json="true" datasource="{{ storage:api.countries.endpoint }}&order=country->>eng" dataheader="{{ storage:api.countries.headers }}" ondone="_.populate(this.aEl)" populate="residence_country" jsonget="birth_country" placeholder="-" required>
           <option value="{{ jsonget:country_code }}" jsonget="country.eng"></option>
         </select>
       </div>

@@ -4,10 +4,10 @@
   <aside index="1"></aside>
 </template>
 
-<section class="pauto bcwhitesmoke bs1">
+<section class="pauto bcwhitesmoke bs1" storage="api">
   <h6 globalize="humans_registered">Humans registered</h6>
   <hr class="bos8 bcgainsboro mt05">
-  <article class="box cards xxs_gtc1 xs_gtc2 sm_gtc3 xl_gtc4 xxl_gtc5 xxxl_gtc6 mt1 gut2- br05- bcwhite- border- tac" json="true;loader" iterate="false" datasource="https://gqfktgknxmguhxgkajat.supabase.co/rest/v1/rpc/persons" dataheader="apikey:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyMDc2MTg0NCwiZXhwIjoxOTM2MzM3ODQ0fQ.xEa_GuNypFdHSdQVLCd0beoL_v8jhWKjSTypX6kn-sg">
+  <article class="box cards xxs_gtc1 xs_gtc2 sm_gtc3 xl_gtc4 xxl_gtc5 xxxl_gtc6 mt1 gut2- br05- bcwhite- border- tac" json="true;loader" iterate="false" datasource="{{ storage:api.human_population.endpoint }}">
     <figure class="p1">
       <figcaption class="dimgray fs08" globalize="living">Living</figcaption>
       <h2 class="tag br2 bcwhitesmoke p05 w10r pr1 pl1 mb1 mt05" loader="true" jsonget="alive"></h2>
